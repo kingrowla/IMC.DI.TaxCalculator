@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication
+    x:Class="IMC.DI.TaxCalculator.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com">
+    <prism:PrismApplication.Resources>
+        <ResourceDictionary>
+            <Color x:Key="DefaultTextColor">#444</Color>
+            <Color x:Key="AppBackgroundColor">#5dbcd2</Color>
+            <Style x:Key="TotalStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Large" />
+            </Style>
+            <Style x:Key="DefaultButtonStyle" TargetType="Button">
+                <Setter Property="WidthRequest" Value="80" />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="#042f66" />
+            </Style>
+        </ResourceDictionary>
+    </prism:PrismApplication.Resources>
+</prism:PrismApplication>

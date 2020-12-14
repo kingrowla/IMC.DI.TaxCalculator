@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="IMC.DI.TaxCalculator.Views.CheckOut"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    Title="{Binding Title}"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <StackLayout
+        Margin="100,25"
+        HorizontalOptions="Fill"
+        VerticalOptions="Fill">
+        <StackLayout HorizontalOptions="End" VerticalOptions="Center">
+            <Label
+                HorizontalTextAlignment="End"
+                Text="{Binding Amount, StringFormat='Amount: {0:C}'}"
+                TextColor="{StaticResource DefaultTextColor}" />
+            <Label
+                HorizontalTextAlignment="End"
+                Text="{Binding Shipping, StringFormat='Shipping: {0:C}'}"
+                TextColor="{StaticResource DefaultTextColor}" />
+            <Label
+                HorizontalTextAlignment="End"
+                Text="{Binding Tax, StringFormat='Tax: {0:C}'}"
+                TextColor="{StaticResource DefaultTextColor}" />
+            <BoxView
+                BackgroundColor="{StaticResource DefaultTextColor}"
+                HeightRequest="1"
+                HorizontalOptions="End"
+                WidthRequest="150" />
+            <Label
+                HorizontalTextAlignment="End"
+                Style="{DynamicResource TotalStyle}"
+                Text="{Binding AmountTotal, StringFormat='Total: {0:C}'}"
+                TextColor="{StaticResource DefaultTextColor}" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

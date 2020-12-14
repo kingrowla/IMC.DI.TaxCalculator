@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="IMC.DI.TaxCalculator.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding Title}"
+    BackgroundColor="{StaticResource AppBackgroundColor}">
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ActivityIndicator
+            HeightRequest="40"
+            HorizontalOptions="CenterAndExpand"
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            VerticalOptions="CenterAndExpand"
+            Color="White" />
+        <StackLayout
+            Margin="100,50"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill">
+            <Label
+                FontSize="Small"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="Let's calculate some tax on this amount."
+                TextColor="White" />
+            <StackLayout Margin="0,40" HorizontalOptions="Center">
+                <Label Text="{Binding Amount, StringFormat='Amount: {0:C}'}" TextColor="White" />
+            </StackLayout>
+            <Button
+                Margin="0,25"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="CheckOut"
+                Style="{DynamicResource DefaultButtonStyle}"
+                Text="Check Out" />
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Label
+                    FontSize="Small"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="Enter zip to calculate the tax rate in your area."
+                    TextColor="White" />
+                <StackLayout Margin="0,40" HorizontalOptions="Center">
+                    <Label
+                        FontSize="24"
+                        Text="{Binding Rate, StringFormat='Rate: {0}'}"
+                        TextColor="White" />
+                </StackLayout>
+                <Entry x:Name="Zip" Text="{Binding Zip}" />
+                <Button
+                    Margin="0,25,0,0"
+                    Command="{Binding CalculateCommand}"
+                    Style="{DynamicResource DefaultButtonStyle}"
+                    Text="Calculate" />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>
