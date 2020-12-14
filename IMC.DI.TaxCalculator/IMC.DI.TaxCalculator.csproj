@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\IMC.DI.TaxCalculator.API\IMC.DI.TaxCalculator.API.csproj" />
+    <ProjectReference Include="..\IMC.DI.TaxCalculator.API\IMC.DI.TaxCalculator.API.csproj" />
   </ItemGroup>
 
   <ItemGroup>
